@@ -4,7 +4,7 @@ export function setWord() {
         if(word.includes(" ")) {
             word = word.replaceAll(" ", "-");
         }
-    localStorage.setItem("word", JSON.stringify(word));
+    localStorage.setItem("word", JSON.stringify(word) || "");
 }
 
 export function getWord() {

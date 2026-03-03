@@ -21,3 +21,10 @@
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(15px);
 }
+
+@mixin flex-between-center-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
