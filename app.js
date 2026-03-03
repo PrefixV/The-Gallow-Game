@@ -5,9 +5,7 @@ import { genGameZone } from "./modules/generateGameZone.js";
 import { toggleGameZone } from "./modules/toggleGameZone.js";
 import { generateKeyboard } from "./modules/generateKeyboard.js";
 import { checkLetter } from "./modules/checkLetter.js";
-import { renderEvent } from "./modules/renderEvent.js";
 import {checkWord} from "./modules/checkWord.js";
-import {renderLetters} from "./modules/renderLetters.js";
 
 document.querySelector(".input__word__button")
     .addEventListener("click", () => {

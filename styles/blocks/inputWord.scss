@@ -18,6 +18,7 @@
   @include background-glass;
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-lg);
+  border: var(--border-main);
 }
 
 .input__word__container__hidden {

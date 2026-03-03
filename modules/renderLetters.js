@@ -2,12 +2,11 @@ import {getWord} from "./getWord.js";
 import {renderEvent} from "./renderEvent.js";
 
 let correctLetters = [];
+correctLetters.length = getWord().length;
 
 export function renderLetters(clickedLetter) {
     const gameIcons = document.querySelectorAll(".game__char");
     let word = getWord();
-    correctLetters.length = word.length;
-
     word = word.toLowerCase().trim();
     let letters = word.split("");
 
@@ -15,10 +14,15 @@ export function renderLetters(clickedLetter) {
         if(letter == clickedLetter) {
             gameIcons[index].textContent = letter;
             correctLetters[index] = letter;
+            console.log(correctLetters);
 
             if(correctLetters.join("") === word) {
                 renderEvent("win");
             }
+        }
+
+        if(letter == "-") {
+            correctLetters[index] = "-"
         }
 
     })
