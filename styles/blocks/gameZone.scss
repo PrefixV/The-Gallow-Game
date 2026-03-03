@@ -1,0 +1,77 @@
+.game__word__container {
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+  padding: var(--spacing-lg);
+  gap: var(--spacing-md);
+  @include flex-center-center-column;
+}
+
+.game__word  {
+  @include  flex-center-center-row;
+  gap: var(--spacing-sm);
+  .game__char {
+    width: 50px;
+    height: 50px;
+    color: var(--font-color-main);
+    @include background-glass;
+    @include flex-center-center-row;
+    border: var(--border-main);
+    border-radius: var(--border-radius-md);
+    text-transform: capitalize;
+    font-size: var(--font-size-xl);
+  }
+}
+
+.game__correct__word__inputs {
+  @include flex-center-center-row;
+  gap: var(--spacing-sm);
+  width: 100%;
+
+  button {
+    max-width: 200px;
+    padding: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    box-shadow: none;
+  }
+}
+
+.game__keyboard {
+  @include flex-center-center-row;
+  gap: var(--spacing-sm);
+  width: 100%;
+  max-width: 900px;
+  flex-wrap: wrap;
+  padding: 100px 0;
+
+  .game__key {
+    font-size: var(--font-size-lg);
+    color: var(--font-color-main);
+    @include flex-center-center-row;
+    @include background-glass;
+    border: var(--border-main);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    width: 80px;
+    height: 80px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      background-color: rgba(115, 115, 115, 0.56);
+      backdrop-filter: blur(20px);
+    }
+  }
+}
+
+.game__word__container__hidden {
+  opacity: 0;
+  visibility: hidden;
+}

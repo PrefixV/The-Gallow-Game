@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<main>
+    <section class="input__word__container">
+        <div class="input__word__wrapper">
+            <div class="input__word__header">
+                <p class="input__word__title">Введите слово:</p>
+                <p class="theme__container"></p>
+            </div>
+            <input type="text" id="input__word" class="input__word__container__input" placeholder="Введите слово:"/>
+            <button class="input__word__button">Начать</button>
+        </div>
+    </section>
+    <section class="game__word__container game__word__container__hidden">
+        <div class="game__word"></div>
+        <div class="game__correct__word__inputs">
+            <input type="text" name="" id="" class="input__correct__word" placeholder="Введите правильное слово:">
+            <button class="check__word__button">Проверить</button>
+        </div>
+        <div class="game__keyboard"></div>
+    </section>
+</main>
+<div class="event__container">
+    <div class="event__container__text__wrapper">
+        <p class="event__container__message"></p>
+    </div>
+</div>
+</body>
+<script type="module" src="app.js" defer></script>
+</html>

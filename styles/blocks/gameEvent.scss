@@ -1,0 +1,63 @@
+.event__container {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 80px;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  @include background-glass;
+  @include flex-center-center-row;
+  border: var(--border-main);
+
+  &__text__wrapper {
+    width: 100%;
+    height: 100%;
+    @include flex-center-center-row;
+
+    .event__container__message {
+      color: var(--font-color-main);
+      font-size: var(--font-size-md);
+    }
+  }
+}
+
+.endGame__event, .wrongLetter__event, .error__event, .win__event {
+  opacity: 1;
+  visibility: visible;
+}
+
+.endGame__event, .wrongLetter__event, .error__event {
+  animation: pulseError 0.5s infinite;
+}
+
+.win__event {
+  animation: pulseSuccess 0.5s infinite;
+}
+
+@keyframes pulseError {
+  0% {
+    box-shadow: 0 0 2px rgba(255, 0, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.49);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  }
+}
+
+@keyframes pulseSuccess {
+  0% {
+    box-shadow: 0 0 2px rgba(45, 255, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 5px rgba(6, 255, 0, 0.49);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(6, 255, 0, 0.8);;
+  }
+}

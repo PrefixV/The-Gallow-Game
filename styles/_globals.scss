@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.2s all ease-in-out;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(1 px);
+  }
+}
+
+input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  max-width: 500px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--font-color-main);
+  font-size: var(--font-size-sm);
+
+  backdrop-filter: blur(10px);
+
+  &::placeholder {
+    color: var(--font-color-secondary);
+  }
+
+  &:focus {
+    box-shadow: 0 0 15px rgba(124, 255, 178, 0.6);
+  }
+}
+
+button {
+  width: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  border: none;
+  @include background-glass;
+  color: var(--font-color-main);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: var(--font-size-md);
+  border: var(--border-main);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
